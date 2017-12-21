@@ -7,7 +7,7 @@
     <meta name="author" content="tzing">
     <title>POE Labyrinth Puzzle Solver</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
 </head>
 <body>
@@ -27,54 +27,32 @@
         </div>
 
         <main role="main">
-        <p class="lead">
+        <p>
             <em>Where there's a puzzle, there must be a cheat sheet.</em>
         </p>
+
+        <div class="btn-group" data-toggle="buttons" id="puzzle-type">
+            <label class="btn btn-outline-warning">
+                <input type="radio" name="options" id="type-8puzzle" autocomplete="off"> 8 puzzle
+            </label>
+            <label class="btn btn-outline-warning">
+                <input type="radio" name="options" id="type-5puzzle" autocomplete="off"> 5 puzzle
+            </label>
+        </div>
+
         <div class="row">
             <div class="pane col-md-6 col-sm-12">
                 <p class="lead text-muted">
                     Initial Status
                 </p>
-                <div class="grid">
-                    <div class="row">
-                        <div class="col"><button type="button" class="btn btn-lg init-status" id="init-0" data-toggle="button"></button></div>
-                        <div class="col"><button type="button" class="btn btn-lg init-status" id="init-1" data-toggle="button"></button></div>
-                        <div class="col"><button type="button" class="btn btn-lg init-status" id="init-2" data-toggle="button"></button></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><button type="button" class="btn btn-lg init-status" id="init-7" data-toggle="button"></button></div>
-                        <div class="col"></div>
-                        <div class="col"><button type="button" class="btn btn-lg init-status" id="init-3" data-toggle="button"></button></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><button type="button" class="btn btn-lg init-status" id="init-6" data-toggle="button"></button></div>
-                        <div class="col"><button type="button" class="btn btn-lg init-status" id="init-5" data-toggle="button"></button></div>
-                        <div class="col"><button type="button" class="btn btn-lg init-status" id="init-4" data-toggle="button"></button></div>
-                    </div>
-                </div>
+                <div class="grid" id="grid-init"></div>
             </div>
 
             <div class="pane col-md-6 col-sm-12">
                 <p class="lead text-muted">
                     Solution
                 </p>
-                <div class="grid">
-                    <div class="row">
-                        <div class="col"><button type="button" class="btn btn-lg solution" id="sol-0"></button></div>
-                        <div class="col"><button type="button" class="btn btn-lg solution" id="sol-1"></button></div>
-                        <div class="col"><button type="button" class="btn btn-lg solution" id="sol-2"></button></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><button type="button" class="btn btn-lg solution" id="sol-7"></button></div>
-                        <div class="col"></div>
-                        <div class="col"><button type="button" class="btn btn-lg solution" id="sol-3"></button></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><button type="button" class="btn btn-lg solution" id="sol-6"></button></div>
-                        <div class="col"><button type="button" class="btn btn-lg solution" id="sol-5"></button></div>
-                        <div class="col"><button type="button" class="btn btn-lg solution" id="sol-4"></button></div>
-                    </div>
-                </div>
+                <div class="grid" id="grid-sol"></div>
                 <p></p>
                 <p>
                     Press these switches in any order to solve the puzzle.
@@ -97,6 +75,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <script src="solver.js"></script>
+    <script src="js/solver.js"></script>
+    <script src="js/ui.js"></script>
 </body>
 </html>
