@@ -1,0 +1,40 @@
+---
+layout: default
+title: Simulator
+---
+
+<div class="row">
+
+    <div class="col-md-4 offset-md-2 col-sm-12">
+    <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-outline-info">
+            <input type="radio" name="options" id="trigger-on" autocomplete="off"> Trigger nearby
+        </label>
+        <label class="btn btn-outline-info">
+            <input type="radio" name="options" id="trigger-off" autocomplete="off"> Standalone
+        </label>
+    </div>
+    </div>
+
+    <div class="col-md-4 col-sm-12">
+    <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-outline-warning">
+            <input type="radio" name="options" id="type-8puzzle" autocomplete="off"> 8 puzzle
+        </label>
+        <label class="btn btn-outline-warning">
+            <input type="radio" name="options" id="type-5puzzle" autocomplete="off"> 5 puzzle
+        </label>
+    </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="pane col-md-6 offset-md-3 col-sm-12">
+        <div class="grid" id="grid"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/solver.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript" src="js/ui-simulator.js"></script>

@@ -1,81 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="POE labyrinth puzzle solver">
-    <meta name="author" content="tzing">
-    <title>POE Labyrinth Puzzle Solver</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet">
+---
+layout: default
+title: Solver
+---
 
-</head>
-<body>
-    <div class="site-wrapper">
-    <div class="site-wrapper-inner">
-    <div class="cover-container">
-    <a href="https://github.com/tzing/poe-puzzle"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+<div class="alert alert-danger" role="alert" id="alert-no-solution">
+    Oops! Something wrong. <a href="https://github.com/tzing/poe-puzzle/issues">report bug</a>
+</div>
 
-        <header class="masthead clearfix">
-            <div class="inner">
-                <h3 class="masthead-brand">Puzzle Solver</h3>
-            </div>
-        </header>
+<p>
+    <em>Where there's a puzzle, there must be a cheat sheet.</em>
+</p>
 
-        <div class="alert alert-danger d-none" role="alert" id="alert-no-solution">
-            Oops! I can't find the solution. <a href="https://github.com/tzing/poe-puzzle/issues">report bug</a>
-        </div>
+<div class="btn-group" data-toggle="buttons" id="puzzle-type">
+    <label class="btn btn-outline-warning">
+        <input type="radio" name="options" id="type-8puzzle" autocomplete="off"> 8 puzzle
+    </label>
+    <label class="btn btn-outline-warning">
+        <input type="radio" name="options" id="type-5puzzle" autocomplete="off"> 5 puzzle
+    </label>
+</div>
 
-        <main role="main">
-        <p>
-            <em>Where there's a puzzle, there must be a cheat sheet.</em>
+<div class="row">
+    <div class="pane col-md-6 col-sm-12">
+        <p class="lead text-muted">
+            Initial Status
         </p>
-
-        <div class="btn-group" data-toggle="buttons" id="puzzle-type">
-            <label class="btn btn-outline-warning">
-                <input type="radio" name="options" id="type-8puzzle" autocomplete="off"> 8 puzzle
-            </label>
-            <label class="btn btn-outline-warning">
-                <input type="radio" name="options" id="type-5puzzle" autocomplete="off"> 5 puzzle
-            </label>
-        </div>
-
-        <div class="row">
-            <div class="pane col-md-6 col-sm-12">
-                <p class="lead text-muted">
-                    Initial Status
-                </p>
-                <div class="grid" id="grid-init"></div>
-            </div>
-
-            <div class="pane col-md-6 col-sm-12">
-                <p class="lead text-muted">
-                    Solution
-                </p>
-                <div class="grid" id="grid-sol"></div>
-                <p></p>
-                <p>
-                    Press these switches in any order to solve the puzzle.
-                </p>
-            </div>
-
-        </div>
-        </main>
-
-        <footer class="mastfoot">
-            <div class="inner">
-                <p>Made with ❤️ by <a href="https://github.com/tzing/">tzing</a>.</p>
-            </div>
-        </footer>
-
-    </div>
-    </div>
+        <div class="grid" id="grid-init"></div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <script src="js/solver.js"></script>
-    <script src="js/ui.js"></script>
-</body>
-</html>
+    <div class="pane col-md-6 col-sm-12">
+        <p class="lead text-muted">
+            Solution
+        </p>
+        <div class="grid" id="grid-sol"></div>
+        <p></p>
+        <p>
+            Press these switches in any order to solve the puzzle.
+        </p>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="js/solver.js"></script>
+<script type="text/javascript" src="js/ui.js"></script>
+<script type="text/javascript" src="js/ui-solver.js"></script>
