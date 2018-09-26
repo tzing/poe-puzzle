@@ -12,3 +12,7 @@ exclude: [
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+
+webmaster_verifications:
+  google: _J6Bwu72vwfh5U-xWJqFuNeUiCk3K2MPQYImSPFmXmo
+  bing: C517873264EDDC356DC0A1DD888DE529
