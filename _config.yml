@@ -1,7 +1,7 @@
 name: POE Puzzle
 description: POE labyrinth puzzle solver
 author: tzing
-url: https://tzing.github.io/
+url: https://tzing.github.io
 baseurl: /poe-puzzle
 
 exclude: [
