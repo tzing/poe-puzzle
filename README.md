@@ -1,10 +1,8 @@
 # POE Puzzle
 
-the puzzle solver for [labyrinth] in [Path of Exile] (POE)
+Puzzle solver for the N-switch puzzles in [the Lord's Labyrinth] in [Path of Exile] (POE).
 
-[labyrinth]: https://pathofexile.gamepedia.com/The_Lord%27s_Labyrinth
+[the Lord's Labyrinth]: https://pathofexile.gamepedia.com/The_Lord%27s_Labyrinth
 [Path of Exile]: https://www.pathofexile.com/
 
-## demo
-
-[link](https://tzing.github.io/poe-puzzle/)
+:link: https://poe-puzzle.tzing.dev/
